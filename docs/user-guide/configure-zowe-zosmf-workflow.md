@@ -1,6 +1,13 @@
 # Configure Zowe with z/OSMF Workflows
 
-As a system programmer, after you install Zowe, you can register and execute the z/OSMF workflows in the web interface to complete the Zowe configuration. z/OSMF helps to simplify the Zowe configuration tasks and reduce the level of expertise that is needed for Zowe configuration.
+As a system programmer, after you install Zowe, you can register and execute the z/OSMF workflows in the web interface to complete the Zowe configuration. z/OSMF helps to simplify the Zowe configuration tasks and reduce the level of expertise that is needed for Zowe configuration.  demo demo 
+
+- [Configure Zowe with z/OSMF Workflows](#configure-zowe-with-zosmf-workflows)
+    - [Configure z/OS Security Manager](#configure-zos-security-manager)
+    - [Configure Zowe certificates](#configure-zowe-certificates)
+    - [Create and configure the Zowe instance directory and start the Zowe started task](#create-and-configure-the-zowe-instance-directory-and-start-the-zowe-started-task)
+    - [Register and execute workflow in the z/OSMF web interface](#register-and-execute-workflow-in-the-zosmf-web-interface)
+
 
 Ensure that you meet the following requirements before you start the Zowe configuration:
 
