@@ -201,6 +201,43 @@ ZWED_node_cluster_storageTimeout=30000
 ```
 where the timeout value is in milliseconds.
 
+## Error: ZWED0171W issue with not having a loopback address { ZWED0171W }
+
+After launching the started task ...
+
+**Symptom:** To do 
+The following messages were in the appServer log:
+
+```
+ZWED0171W - Rejected undefined referrer for url=/login, ip=xx.xx.xx.xx
+```
+
+
+```
+ZOWE WARN (_zsf.auth,webauth.js:328) ZWED0003W - mq5xJaY71xUDA19ku5ScQbdm6bwUF1pN: Session security call authenticate failed for auth handler org.zowe.zlux.auth.safsso. Plugin response: {"success":false,"error":{"message":"ZSS 403 Forbidden"},"reason":"Unknown","apiml":true,"zss":true,"sso":false,"canChangePassword":true}
+
+```
+
+**Problem Description**
+
+ZWED0171W - Rejected undefined referrer for url=/login, ip=xx.xx.xx.xx
+IP Address logged in above message should be the client IP Address that initiated the request while it shows the server IP Address that is used in ZOWE_IP_ADDRESS=xx.xx.xx.xx.
+It means that the server is contacting itself, but not through localhost:
+https://github.com/zowe/zlux-server-framework/blob/staging/lib/webapp.js#L1289
+if (req.ip == this.loopbackConfig.host || address.range() == 'loopback'
+This can happen if the IPs that the server uses does not include a loopback address.
+"ipAddresses": ["0.0.0.0"], in appServer log means to use all available IPs, but 127.0.0.1 is not in that list.
+
+**Solution**  To do 
+The server should contain a loopback address.
+
+**Alternate Solution** 
+Add the following in instance.env.
+
+```
+ZWED_node_https_ipAddresses=$ZOWE_IP_ADDRESS
+```
+
 ## Warning: Problem making eureka request { Error: connect ECONNREFUSED }
 
 **Symptom:** 
