@@ -1,7 +1,3 @@
----
-sidebar_label: AAA
----
-
 # Enabling PassTicket creation for API Services that Accept PassTickets <!-- omit in toc -->
 
 As system programmer, you can configure Zowe to use PassTickets for API services that are compatible to accept them to authenticate your service with the API Mediation Layer.

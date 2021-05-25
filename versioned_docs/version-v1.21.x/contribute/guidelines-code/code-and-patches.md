@@ -1,4 +1,6 @@
-# Pull requests guidelines
+---
+title: Pull requests guidelines
+--- 
 
 The Zowe&trade; source code is stored in GitHub repositories under the [Zowe GitHub project](https://github.com/zowe). You contribute to the project through Pull Requests in GitHub.  
 

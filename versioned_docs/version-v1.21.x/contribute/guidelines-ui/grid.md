@@ -1,4 +1,6 @@
-# Grid
+---
+title: Grid
+--- 
 
 Grid systems are used for creating page layouts through a series of rows and columns that house your content. Zowe&trade; uses a responsive, mobile-first, fluid grid system that appropriately scales up to 12 columns as the device or view port size increases.
 

@@ -1,4 +1,6 @@
-# Code categories
+---
+title: Code categories
+---
 
 The Zowe&trade; codebase consists of a few key areas, with both unique and shared guidelines that define how to write new code. A few such areas are:
 

@@ -1,4 +1,6 @@
-# Introduction
+---
+title: Introduction
+---
 
 This style guide is the visual language that represents Zowe&trade;. It is a living document that will be updated based on the needs of our users and software requirements.
 
